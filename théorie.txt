@@ -1,0 +1,21 @@
+1. La notation @override signifie qu'une methode est héritée d'un classe parente.
+2. On doit redefinir equals et hashCode parceque deux objets égaux doivent avoir la meme valeur de hachage lorsqu'ils restent egaux mais n'ont pas l'obligation d'avoir des valeurs de hachage distinctes.
+3. Le polymorphisme statique c'est la facultéé de prendre plusieur forme appropriée est determiné au moment de la compilation 
+exemple:
+public class OverloadingDemo {
+public void meth(int value) {
+System.out.println("int value : "+ value);
+}
+public void meth(String name) {
+System.out.println("String value :"+ name);
+}
+public void meth(int value, String name) {
+System.out.println("Name with value : "+ value+" "+name);
+}
+public static void main(String[] args) {
+OverloadingDemo demo = new OverloadingDemo();
+demo.meth(10);
+demo.meth("online tutorials point");
+demo.meth(20, "Overloading Demo");
+}
+}
